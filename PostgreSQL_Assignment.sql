@@ -40,6 +40,8 @@ INSERT into rangers ( name, region, email) VALUES
 
 SELECT * FROM rangers;
 
+
+-- insert value on sightings table 
 INSERT INTO species (common_name, scientific_name, discovery_date, conservation_status) VALUES 
 ('African Elephant', 'Loxodonta africana', '1990-06-12', 'Vulnerable'),
 ('Bald Eagle', 'Haliaeetus leucocephalus', '1985-03-24', 'Least Concern'),
@@ -50,6 +52,7 @@ INSERT INTO species (common_name, scientific_name, discovery_date, conservation_
 SELECT * FROM species;
 
 
+-- insert value on sightings table 
 INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VALUES 
     (1, 3, '2024-04-12 07:10:00', 'North Ridge Path', 'Snow Leopard seen briefly at sunrise.'),
 (2, 1, '2024-04-18 17:45:00', 'East River Bank', 'Elephant herd of 8 crossing river.'),
