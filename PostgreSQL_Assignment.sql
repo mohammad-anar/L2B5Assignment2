@@ -104,3 +104,9 @@ SELECT r.name as rangers_name, count(s.sighting_id) as total_sightings from sigh
 
 SELECT common_name from sightings right JOIN species USING(species_id ) WHERE sightings.sighting_id IS NULL;
 
+
+
+
+-- 6️⃣ Show the most recent 2 sightings. 
+
+SELECT * FROM sightings ORDER BY sighting_time LIMIT 2;
