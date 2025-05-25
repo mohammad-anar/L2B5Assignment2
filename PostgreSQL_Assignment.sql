@@ -66,3 +66,10 @@ INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VA
 (5, 3, '2024-05-08 09:25:00', 'Rocky Cliffs', 'Snow Leopard resting in shade.');
 
 SELECT * from sightings;
+
+
+-- =========================================================================================================
+-- 1️⃣ Register a new ranger with provided data with name = 'Derek Fox' and region = 'Coastal Plains'
+
+INSERT into rangers ( name, region, email) VALUES
+('Derek Fox', 'Coastal Plains', 'derekfox@nps.gov');
