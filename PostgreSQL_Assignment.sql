@@ -56,7 +56,7 @@ SELECT * FROM species;
 INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VALUES 
     (1, 3, '2024-04-12 07:10:00', 'North Ridge Path', 'Snow Leopard seen briefly at sunrise.'),
 (2, 1, '2024-04-18 17:45:00', 'East River Bank', 'Elephant herd of 8 crossing river.'),
-(3, 5, '2024-04-20 11:30:00', 'Forest Edge', 'Grizzly feeding on berries.'),
+(3, 5, '2024-04-20 11:30:00', 'Snowfall Pass', 'Grizzly feeding on berries.'),
 (4, 2, '2024-04-25 13:00:00', 'Eagle Nest Point', 'Pair circling overhead.'),
 (5, 4, '2024-04-29 15:20:00', 'Jungle Sector C', 'One juvenile separated from group.'),
 (1, 2, '2024-05-01 06:50:00', 'Hilltop Rocks', 'Bald eagle spotted perched.'),
@@ -68,8 +68,20 @@ INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VA
 SELECT * from sightings;
 
 
--- =========================================================================================================
+-- ============================================Question start=============================================================
+
 -- 1️⃣ Register a new ranger with provided data with name = 'Derek Fox' and region = 'Coastal Plains'
 
 INSERT into rangers ( name, region, email) VALUES
 ('Derek Fox', 'Coastal Plains', 'derekfox@nps.gov');
+
+
+-- 2️⃣ Count unique species ever sighted.
+
+SELECT count(*) from (SELECT count(species_id ) as unique_species_count  FROM sightings 
+    GROUP BY species_id); 
+
+
+-- 3️⃣ Find all sightings where the location includes "Pass".
+
+SELECT * from sightings WHERE location LIKE '%Pass%';
