@@ -119,3 +119,15 @@ UPDATE species
     SET conservation_status = 'Historic'
     WHERE EXTRACT(year from discovery_date) < '1800';
 
+
+
+
+-- 8️⃣ Label each sighting's time of day as 'Morning', 'Afternoon', or 'Evening'.
+
+    SELECT sighting_id, sighting_time,
+        CASE 
+            WHEN extract(HOUR from sighting_time) < 12 THEN  'Morning'
+            WHEN extract(HOUR from sighting_time) >= 12 AND extract(HOUR from sighting_time) > 17 THEN 'Afternoon'
+            ELSE  'Evening'
+        END as time_of_day
+        FROM sightings;
