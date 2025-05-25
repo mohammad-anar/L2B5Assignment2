@@ -29,3 +29,13 @@ CREATE Table sightings(
     location TEXT NOT null,
     notes TEXT
 )
+
+-- insert value on rangers table 
+INSERT into rangers ( name, region, email) VALUES
+('Alice Johnson', 'Yellowstone National Park', 'alice.johnson@nps.gov'),
+('Brian Lee', 'Yosemite National Park', 'brian.lee@nps.gov'),
+('Carla Mendes', 'Kruger National Park', 'carla.mendes@sanparks.org'),
+('David Kim', 'Banff National Park', 'david.kim@parkscanada.ca'),
+('Elena Petrova', 'Serengeti National Park', 'elena.petrova@tzparks.tz');
+
+SELECT * FROM rangers;
