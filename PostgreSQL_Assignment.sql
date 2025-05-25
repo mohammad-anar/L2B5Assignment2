@@ -131,3 +131,14 @@ UPDATE species
             ELSE  'Evening'
         END as time_of_day
         FROM sightings;
+
+
+
+
+-- 9️⃣ Delete rangers who have never sighted any species
+
+    DELETE FROM rangers 
+        WHERE ranger_id = (SELECT ranger_id from sightings 
+            RIGHT JOIN rangers USING(ranger_id) 
+                WHERE sightings.ranger_id IS NULL);
+
