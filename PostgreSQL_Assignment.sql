@@ -20,3 +20,12 @@ CREATE Table species(
     conservation_status VARCHAR(30) NOT NULL
 );
 
+-- create sightings table
+CREATE Table sightings(
+    sighting_id SERIAL PRIMARY KEY,
+    ranger_id INTEGER REFERENCES rangers(ranger_id),
+    species_id INTEGER REFERENCES species(species_id),
+    sighting_time TIMESTAMP NOT null,
+    location TEXT NOT null,
+    notes TEXT
+)
