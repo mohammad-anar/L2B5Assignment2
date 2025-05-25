@@ -82,9 +82,12 @@ SELECT count(*) from (SELECT count(species_id ) as unique_species_count  FROM si
     GROUP BY species_id); 
 
 
+
+
 -- 3️⃣ Find all sightings where the location includes "Pass".
 
 SELECT * from sightings WHERE location LIKE '%Pass%';
+
 
 
 
@@ -93,3 +96,11 @@ SELECT * from sightings WHERE location LIKE '%Pass%';
 SELECT r.name as rangers_name, count(s.sighting_id) as total_sightings from sightings s 
     JOIN rangers r USING(ranger_id) 
         GROUP BY r.name;
+
+
+
+
+-- 5️⃣ List species that have never been sighted.
+
+SELECT common_name from sightings right JOIN species USING(species_id ) WHERE sightings.sighting_id IS NULL;
+
