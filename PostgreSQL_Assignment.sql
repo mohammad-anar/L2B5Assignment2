@@ -110,3 +110,12 @@ SELECT common_name from sightings right JOIN species USING(species_id ) WHERE si
 -- 6️⃣ Show the most recent 2 sightings. 
 
 SELECT * FROM sightings ORDER BY sighting_time LIMIT 2;
+
+
+
+-- 7️⃣ Update all species discovered before year 1800 to have status 'Historic'.
+
+UPDATE species
+    SET conservation_status = 'Historic'
+    WHERE EXTRACT(year from discovery_date) < '1800';
+
