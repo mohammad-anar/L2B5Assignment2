@@ -39,3 +39,27 @@ INSERT into rangers ( name, region, email) VALUES
 ('Elena Petrova', 'Serengeti National Park', 'elena.petrova@tzparks.tz');
 
 SELECT * FROM rangers;
+
+INSERT INTO species (common_name, scientific_name, discovery_date, conservation_status) VALUES 
+('African Elephant', 'Loxodonta africana', '1990-06-12', 'Vulnerable'),
+('Bald Eagle', 'Haliaeetus leucocephalus', '1985-03-24', 'Least Concern'),
+('Snow Leopard', 'Panthera uncia', '2001-11-02', 'Endangered'),
+('Mountain Gorilla', 'Gorilla beringei beringei', '1995-09-18', 'Critically Endangered'),
+('Grizzly Bear', 'Ursus arctos horribilis', '1988-07-29', 'Least Concern');
+
+SELECT * FROM species;
+
+
+INSERT INTO sightings (ranger_id, species_id, sighting_time, location, notes) VALUES 
+    (1, 3, '2024-04-12 07:10:00', 'North Ridge Path', 'Snow Leopard seen briefly at sunrise.'),
+(2, 1, '2024-04-18 17:45:00', 'East River Bank', 'Elephant herd of 8 crossing river.'),
+(3, 5, '2024-04-20 11:30:00', 'Forest Edge', 'Grizzly feeding on berries.'),
+(4, 2, '2024-04-25 13:00:00', 'Eagle Nest Point', 'Pair circling overhead.'),
+(5, 4, '2024-04-29 15:20:00', 'Jungle Sector C', 'One juvenile separated from group.'),
+(1, 2, '2024-05-01 06:50:00', 'Hilltop Rocks', 'Bald eagle spotted perched.'),
+(2, 4, '2024-05-02 12:05:00', 'Rainforest Basin', 'Gorilla tracks found nearby.'),
+(3, 1, '2024-05-03 16:40:00', 'Savannah Tree Line', 'Young elephant playing.'),
+(4, 5, '2024-05-06 18:00:00', 'Grizzly Hollow', 'Bear sighted before dusk.'),
+(5, 3, '2024-05-08 09:25:00', 'Rocky Cliffs', 'Snow Leopard resting in shade.');
+
+SELECT * from sightings;
