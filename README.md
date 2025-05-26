@@ -1,4 +1,6 @@
-###1. What is PostgreSQL?
+<h3>Here I've explained 10 questions about PostgreSQL.</h3>
+
+1. What is PostgreSQL?
 Answer: PostgreSQL (also called Postgres) is a free and open-source relational database system. It uses SQL to store and manage data in tables. PostgreSQL is known for being reliable, secure, and fast. It is used in web applications, data analysis, and large systems that need strong data handling features.
 
 2. What is the purpose of a database schema in PostgreSQL?
@@ -27,3 +29,6 @@ Answer: The GROUP BY clause is used to group rows that have the same values in s
 
 10. How can you calculate aggregate functions like COUNT(), SUM(), and AVG() in PostgreSQL?
 Answer: Aggregate functions are used to perform calculations on a group of rows and return a single value. COUNT() counts the number of rows, SUM() adds up values, and AVG() calculates the average. These functions are often used with GROUP BY to analyze and summarize data.
+
+
+Note: I've search every question on GPT and learn and write here.
